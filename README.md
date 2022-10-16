@@ -1,4 +1,4 @@
-# Scrimba - Imperial/Metric unit Converter
+# Scrimba - Oldagram
 
 This is a solution to the [Oldagram Solo Project](https://scrimba.com/learn/frontend/solo-project-oldagram-co2274297820a9405442e3a2a) from the [Frontend developper path](https://scrimba.com/learn/frontend) on [Scrimba](https://scrimba.com/).
 
