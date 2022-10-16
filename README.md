@@ -32,7 +32,7 @@ I have continued with these stretch goals:
 
 ### Links
 
-- Live Site: [DEMO](https://vinh-nguyen-code.github.io/Unit-converter-Scrimba/)
+- Live Site: [DEMO](https://vinh-nguyen-code.github.io/Oldagram-Scrimba/)
 
 ## Process
 
