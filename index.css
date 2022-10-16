@@ -1,0 +1,100 @@
+html, body {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 400px;
+    background-color:#F5F5F5;
+}
+
+.copyright{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.copyright a {
+    color:black
+}
+
+.copyright a:hover {
+    color:lightcoral
+}
+
+/*Typography*/
+
+p{
+    margin: 0;
+    font-size: 13px;
+}
+
+.strong-text{
+    font-weight: bold;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    height: 67px;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: 1px solid #C6C6C6
+}
+    .logo{
+        padding: 5px;
+        width: 125px;
+    }
+    .user-avatar{
+        width: 34px;
+        height:34px;
+        border-radius: 50%;
+        padding: 10px
+    }
+
+header,
+.post-container{
+    background-color:white;
+}
+
+/*Post Container*/
+
+.post-container{
+    border:1px solid #C6C6C6;
+    margin:10px auto;
+    border-radius: 5px;
+
+}
+
+.user-details{
+    display: flex;
+    align-items: center;
+}
+
+    .location{
+        font-size: 12px;
+    }
+
+
+    .post-image{
+        width: 100%;
+    }
+
+    .icon{
+        width: 22px;
+        height:22px;
+        margin: 10px;
+        transition:0.3s
+    }
+
+    .icon:hover{
+        opacity:0.6;
+        cursor: pointer;
+    }
+
+.post-details{
+    padding: 0 0 10px 10px;
+}
+
+    .likes{
+        margin-bottom: 10px;
+    }
+
