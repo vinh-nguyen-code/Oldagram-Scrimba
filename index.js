@@ -1,73 +1,51 @@
-const posts = [
-    {
-        name: "Vincent van Gogh",
-        username: "vincey1853",
-        location: "Zundert, Netherlands",
-        avatar: "images/avatar-vangogh.jpg",
-        post: "images/post-vangogh.jpg",
-        comment: "just took a few mushrooms lol",
-        likes: 21
-    },
-    {
-        name: "Gustave Courbet",
-        username: "gus1819",
-        location: "Ornans, France",
-        avatar: "images/avatar-courbet.jpg",
-        post: "images/post-courbet.jpg",
-        comment: "i'm feelin a bit stressed tbh",
-        likes: 4
-    },
-        {
-        name: "Joseph Ducreux",
-        username: "jd1735",
-        location: "Paris, France",
-        avatar: "images/avatar-ducreux.jpg",
-        post: "images/post-ducreux.jpg",
-        comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
-    }
-]
+import {postsData} from './data.js'
 
-const mainEl = document.getElementById("main-el")
 const likeBtn = document.getElementsByClassName("like-btn")
 const likesCount = document.getElementsByClassName("likes-count")
 
 
-/* Render out posts from the array posts */
-function renderPosts(){
-    let post =""
-    for (let i =0;i<posts.length;i++){
-        post += 
+/* Get feed from the data.js */
+function getFeedHtml(){
+    let feedHtml =``
+    postsData.forEach(function(post){
+        feedHtml += 
             `
             <section class = "post-container">
                 <section class ="user-details">
-                    <img src="${posts[i].avatar}" class ="user-avatar">
+                    <img src="${post.avatar}" class ="user-avatar">
                     <div>
-                        <p class = "name strong-text">${posts[i].name}</p>
-                        <p class = "location">${posts[i].location}</p>
+                        <p class = "name strong-text">${post.name}</p>
+                        <p class = "location">${post.location}</p>
                     </div>        
                 </section>
                 <section>
-                    <img src = "${posts[i].post}" class = "post-image">
+                    <img src = "${post.post}" class = "post-image">
                     <div>
-                        <img src="images/icon-heart.png" class ="icon like-btn" onclick="this.src='images/instagram-heart.png'">
+                        <img src="images/icon-heart.png" class ="icon like-btn" onclick="this.src='images/instagram-heart.png'" data-like = '${post.id}'>
                         <img src="images/icon-comment.png" class ="icon">
                         <img src="images/icon-dm.png" class ="icon">
                     </div>
                     <div class ="post-details">
-                        <p class ="likes strong-text likes-count">${posts[i].likes} likes</p>
-                        <p> <strong>${posts[i].username}</strong> ${posts[i].comment}</p>
+                        <p class ="likes strong-text likes-count">${post.likes} likes</p>
+                        <p> <strong>${post.username}</strong> ${post.comment}</p>
                     </div>
                 </section>           
             </section>
             `
-    }
-    mainEl.innerHTML = post
+    })
+
+    return feedHtml
 }
 
-renderPosts()
+/* Render out feed */
+function renderFeedHtml(){
+    document.getElementById("main-el").innerHTML = getFeedHtml()
+}
+renderFeedHtml()
 
-/* Add 1 like to the post */
+
+
+/* Add 1 like when clicking the Like button
 for (let j = 0; j < posts.length;j++){
     likeBtn[j].addEventListener("click", function() {
         let addLike = posts[j].likes +1 
@@ -76,4 +54,21 @@ for (let j = 0; j < posts.length;j++){
             ${addLike} likes
             `
     })
+}
+ */
+
+/* Add 1 like when clicking the Like button */
+
+document.addEventListener('click', function(e){ 
+    if(e.target.dataset.like){
+        addLike(e.target.dataset.like)
+    }
+})
+
+function addLike(postId){
+    const targetPostObj = postsData.filter(function(post){
+        return post.id === postId
+    })[0]
+    alert(targetPostObj)
+    
 }
