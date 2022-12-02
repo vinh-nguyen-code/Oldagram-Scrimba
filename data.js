@@ -7,7 +7,8 @@ export const postsData = [
       post: "images/post-vangogh.jpg",
       comment: "just took a few mushrooms lol",
       likes: 21,
-      id:1
+      id:1,
+      type: module
   },
   {
       name: "Gustave Courbet",

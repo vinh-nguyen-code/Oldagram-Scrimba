@@ -69,6 +69,6 @@ function addLike(postId){
     const targetPostObj = postsData.filter(function(post){
         return post.id === postId
     })[0]
-    alert(targetPostObj)
+    console.log(targetPostObj)
     
 }
