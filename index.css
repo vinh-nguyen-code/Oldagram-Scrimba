@@ -98,3 +98,6 @@ header,
         margin-bottom: 10px;
     }
 
+    .liked{
+        content:url("images/instagram-heart.png");
+    }
