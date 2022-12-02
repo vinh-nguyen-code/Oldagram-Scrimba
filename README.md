@@ -30,6 +30,10 @@ I have continued with these stretch goals:
 - Increase the likes when clicking the post
 - Change like button when clicking on
 
+After learning new JS concepts from the Module 5, I came back to improve my code, here's what I improved:
+- 
+- Write commments to improbe readability
+
 ### Links
 
 - Live Site: [DEMO](https://vinh-nguyen-code.github.io/Oldagram-Scrimba/)
