@@ -36,7 +36,7 @@ After learning new JS concepts from the Module 5, I came back to improve my code
 
 ### Links
 
-- Live Site: [DEMO](https://vinh-nguyen-code.github.io/ORDERING-APP/)
+- Live Site: [DEMO](https://vinh-nguyen-code.github.io/Oldagram-Scrimba/)
 
 ## Process
 
