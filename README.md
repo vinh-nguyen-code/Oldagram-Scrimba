@@ -20,13 +20,19 @@ This is a solution to the [Oldagram Solo Project](https://scrimba.com/learn/fron
 
 - Display following a Figma design. 
 - Built from scratch.
-- Render the menu options using Javascript
-- Be able to add/remove items
-- Have a payment modal with compulsory form inputs
+- Use semantic HTML
+- Add hover effects to the icons
 
 I have continued with these stretch goals:
-- Improve UX by adding setTimeOut to the payement Modal and thankyou message after order.
-- Hide order section when no item has been selected
+- Use JavaScript to render out all posts
+- Increase the likes when clicking the post
+- Change like button when clicking on
+
+After learning new JS concepts from the Module 5, I came back to improve my code, here's what I improved:
+- Separate data into a specific file and import into my main index.js file
+- Use of data attributes and filter function to add 1 like when clicking the Like button and decrement 1 when clicking again this button, then re-render the Feed with the updated number of likes
+- Change the image of the liked button by switching to another predefined css class (in css, use of content:url("") )
+- Write commments to improve readability
 
 ### Links
 
